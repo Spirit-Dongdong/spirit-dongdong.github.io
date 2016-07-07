@@ -3,14 +3,53 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mot-clé: hello world | Hexo</title>
+  <title>Learning to rank系列1-概述 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/hello-world/index.html">
+  <meta name="description" content="打算把这段时间看的Learning to rank的资料结合自己的理解逐步记录下来.
+几种IR的度量方式:
+MAP:(Mean Average Precision)
+NDCG: MAP NDCG(Normalized Discounted Cumulative Gain)
+Learning to rank的主要流程:
+
+主要有3类LTR:
+
+PointWise
+
+input:单个文档
+output">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning to rank系列1-概述">
+<meta property="og:url" content="http://yoursite.com/2014/12/06/learning-to-rank-e7-b3-bb-e5-88-971-e6-a6-82-e8-bf-b0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="打算把这段时间看的Learning to rank的资料结合自己的理解逐步记录下来.
+几种IR的度量方式:
+MAP:(Mean Average Precision)
+NDCG: MAP NDCG(Normalized Discounted Cumulative Gain)
+Learning to rank的主要流程:
+
+主要有3类LTR:
+
+PointWise
+
+input:单个文档
+output">
+<meta property="og:image" content="http://fangdonghao.com/wp-content/uploads/2014/12/屏幕快照-2014-12-04-下午5.21.22.png">
+<meta property="og:updated_time" content="2016-07-07T10:04:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Learning to rank系列1-概述">
+<meta name="twitter:description" content="打算把这段时间看的Learning to rank的资料结合自己的理解逐步记录下来.
+几种IR的度量方式:
+MAP:(Mean Average Precision)
+NDCG: MAP NDCG(Normalized Discounted Cumulative Gain)
+Learning to rank的主要流程:
+
+主要有3类LTR:
+
+PointWise
+
+input:单个文档
+output">
+<meta name="twitter:image" content="http://fangdonghao.com/wp-content/uploads/2014/12/屏幕快照-2014-12-04-下午5.21.22.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,39 +98,97 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/07/hello/" class="archive-article-date">
-  <time datetime="2016-07-07T08:34:47.000Z" itemprop="datePublished">Jul 7</time>
+        <section id="main"><article id="post-learning-to-rank-e7-b3-bb-e5-88-971-e6-a6-82-e8-bf-b0" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/06/learning-to-rank-e7-b3-bb-e5-88-971-e6-a6-82-e8-bf-b0/" class="article-date">
+  <time datetime="2014-12-06T15:08:52.000Z" itemprop="datePublished">2014-12-06</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/机器学习/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/07/hello/">hello</a>
+    <h1 class="article-title" itemprop="name">
+      Learning to rank系列1-概述
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>打算把这段时间看的Learning to rank的资料结合自己的理解逐步记录下来.</p>
+<p>几种IR的度量方式:</p>
+<p><strong>MAP:</strong>(Mean Average Precision)</p>
+<p><strong>NDCG:</strong> MAP NDCG(Normalized Discounted Cumulative Gain)</p>
+<p>Learning to rank的主要流程:</p>
+<p><img src="http://fangdonghao.com/wp-content/uploads/2014/12/屏幕快照-2014-12-04-下午5.21.22.png" alt="屏幕快照 2014 12 04 下午5 21 22" title="屏幕快照 2014-12-04 下午5.21.22.png"></p>
+<p>主要有3类LTR:</p>
+<ul>
+<li><p>PointWise</p>
+<ul>
+<li>input:单个文档</li>
+<li>output:这个文档的打分</li>
+</ul>
+</li>
+<li><p>PairWise</p>
+<ul>
+<li>input:一对文档</li>
+<li>output:这对文档的相对顺序</li>
+</ul>
+</li>
+<li><p>ListWise</p>
+<ul>
+<li>input:一堆文档</li>
+<li>output:这堆文档的打分</li>
+</ul>
+</li>
+</ul>
+<p>后面会对这三类LTR分别展开说</p>
+<p>参考资料:</p>
+<ol>
+<li>Learning to rank for information retrieval, T Y Liu</li>
+<li><a href="http://en.wikipedia.org/wiki/Discounted_cumulative_gain" target="_blank" rel="external">http://en.wikipedia.org/wiki/Discounted_cumulative_gain</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/12/06/learning-to-rank-e7-b3-bb-e5-88-971-e6-a6-82-e8-bf-b0/" data-id="ciqc5d5mx000by2s6woehawv7" class="article-share-link">Partager</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/07/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/12/06/grep-e5-8c-b9-e9-85-8dtab-e9-94-ae/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">grep匹配tab键</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
